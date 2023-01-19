@@ -1,5 +1,5 @@
 module.exports = function check(str, bracketsConfig) {
-    if (!str || !bracketsConfig) return false
+    if (str.length == 1) return true
     
     for (let i = 0; i < bracketsConfig.length; i++) {               // realisation '())('
         if (str.includes(bracketsConfig[i][0] + bracketsConfig[i][1])) {
