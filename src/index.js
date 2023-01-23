@@ -1,6 +1,6 @@
 module.exports = function check(str, bracketsConfig) {
-    if (str.length == 1) return true
-    
+    if (str.length == 1) return false
+
     for (let i = 0; i < bracketsConfig.length; i++) {               // realisation '())('
         if (str.includes(bracketsConfig[i][0] + bracketsConfig[i][1])) {
             let clearStr = str.replace([bracketsConfig[i][0] + bracketsConfig[i][1]], '')
